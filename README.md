@@ -3,22 +3,21 @@
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
-Things you may want to cover:
+This project requires:
 
-* Ruby version
+  Ruby 2.6.3, preferably managed using [rbenv]
+  Rails 5.2.3
+  MySQL must be installed and accepting connections
 
-* System dependencies
+Please follow the steps to setup:
 
-* Configuration
+1.) Install ruby version 2.6.3
+2.) Install rails version 5.2.3
+3.) Install MySQL 
+4.) On the project root directory: 
+  a.) Run bundle install 
+  b.) rename database.yml.example to database.yml 
+  c.) Run rake db:create 
+  d.) run rake db:migrate
+5.) run rails s
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...

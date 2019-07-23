@@ -1,10 +1,16 @@
-<h1>Hello, Rails!</h1>
 <% if user_signed_in? %>
-  You are registered to vote in precinct <%= current_user.voter.precinct %>
-  Logged in as <strong><%= current_user.email %></strong>.
+	<h1>Hello, <%= current_user.email %></h1>
+  <p>You are registered to vote in precinct <strong><%= current_user.voter.precinct %></strong></p>
+  <p>Early voting begins on <strong><%= Date.today %>.</strong> Poles are open from 10:00 AM to 4:00 pm on <strong><%= Date.today + 3.days %></strong> to <strong><%= Date.today + 4.days %></strong>
+  The closed Location from your home is ABC. You can vote at any location in the country during early voting.</p>
+  <p>Election Day is <strong><%= Date.today + 10.day %></strong> and voting is from 10:00 AM to 4:00 PM. The voting location for your precinct is <strong><%= current_user.voter.precinct %></strong></p>
+
+  <p>The Above information was received from the XXX Country Election administrator and is believed to be accurate. Please Contact them at 1234567 with any question or concerns.</p>
+  
   <%= link_to 'Edit profile', edit_user_registration_path, :class => 'navbar-link' %> |
   <%= link_to "Logout", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
 <% else %>
   <%= link_to "Sign up", new_user_registration_path, :class => 'navbar-link'  %> |
   <%= link_to "Login", new_user_session_path, :class => 'navbar-link'  %>
 <% end %>
+

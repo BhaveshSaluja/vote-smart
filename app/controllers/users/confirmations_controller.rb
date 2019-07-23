@@ -15,7 +15,7 @@ class Users::ConfirmationsController < Devise::ConfirmationsController
   def show
     @resource = resource_class.confirm_by_token(params[:confirmation_token])
     if @resource
-      Voter.create(user: @resource, precinct: SecureRandom.hex(2), first_name: SecureRandom.hex(2), last_name: SecureRandom.hex(2))
+      Voter.create(user: @resource, precinct: SecureRandom.hex(6))
       redirect_to new_user_session_path
     end
   end
