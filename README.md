@@ -16,7 +16,7 @@ Please follow the steps to setup:
 3.) Install MySQL 
 4.) On the project root directory: 
   a.) Run bundle install 
-  b.) rename database.yml.example to database.yml 
+  b.) Configure database.yml 
   c.) Run rake db:create 
   d.) run rake db:migrate
 5.) run rails s
